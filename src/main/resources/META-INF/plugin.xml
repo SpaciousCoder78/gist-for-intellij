@@ -1,0 +1,35 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+  <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+  <id>com.github.spaciouscoder78.Gist-for-IntelliJ</id>
+
+  <!-- Public plugin name should be written in Title Case.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+  <name>Gist-for-IntelliJ</name>
+
+  <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+  <vendor email="aryankmmiv@outlook.com" url="https://github.com/SpaciousCoder78">SpaciousCoder78</vendor>
+
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description><![CDATA[
+    Run Github Gist from IntelliJ <br>
+  ]]></description>
+
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
+  <actions>
+    <group id="Gist-For-IntelliJ.gistopener" text="Gist for IntelliJ" description="Run Github Gists in IntelliJ">
+      <add-to-group group-id="ToolsMenu" anchor="last"> </add-to-group>
+      <action class="com.github.spaciouscoder78.gistforintellij.gistopener" id="Gist-For-IntelliJ.Actions.gistopener" text="Open a New Github Gist"/>
+    </group>
+  </actions>
+</idea-plugin>
